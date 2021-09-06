@@ -1,11 +1,11 @@
-function submit_by_id(){
+async function submit_by_id(){
+    let url ='http://127.0.0.1:5500';
+    let data= document.getElementById(subject)
     const options={
         method:'post',
-        Headers:{'content-Type','application/json'},
-        body:JSON:stringify(data)
+        body:JSON.stringify(data)
     };
-    fetch('/api',options).then(response =>{
+    fetch(url,options).then(response =>{
         console.log(response);
     });
-    
 }
